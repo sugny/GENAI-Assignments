@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <Worksheet ss:Name="Test Cases">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Test Case ID</Data></Cell>
+        <Cell><Data ss:Type="String">Title</Data></Cell>
+        <Cell><Data ss:Type="String">Category</Data></Cell>
+        <Cell><Data ss:Type="String">Expected Result</Data></Cell>
+        <Cell><Data ss:Type="String">Steps</Data></Cell>
+        <Cell><Data ss:Type="String">Test Data</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-001</Data></Cell>
+        <Cell><Data ss:Type="String">View own employee profile successfully</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Employee profile page displays current user's personal details correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Select 'My Profile' option</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-002</Data></Cell>
+        <Cell><Data ss:Type="String">Update mandatory fields in employee profile</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Profile updates are saved and a success message is shown; updated details are reflected on the profile page</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Edit mandatory fields (e.g., First Name, Last Name, Email)
+Click 'Save' button</Data></Cell>
+        <Cell><Data ss:Type="String">First Name: John, Last Name: Doe, Email: john.doe@example.com</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-003</Data></Cell>
+        <Cell><Data ss:Type="String">Upload a valid profile picture</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Profile picture is uploaded, displayed on the profile page, and a confirmation message appears</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Click 'Change Photo' button
+Select a JPEG image file less than 2 MB
+Click 'Upload' button</Data></Cell>
+        <Cell><Data ss:Type="String">photo.jpg (1.5 MB, JPEG)</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-004</Data></Cell>
+        <Cell><Data ss:Type="String">Change password with valid current password</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Password is changed successfully and a success notification is displayed</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'Change Password' section
+Enter current valid password
+Enter new password meeting complexity rules
+Confirm new password
+Click 'Submit' button</Data></Cell>
+        <Cell><Data ss:Type="String">Current: Pass@123, New: NewPass@456</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-005</Data></Cell>
+        <Cell><Data ss:Type="String">View audit trail of profile changes</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">A list of recent profile modifications with timestamps and changed fields is displayed</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Click 'View Change History' link</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-006</Data></Cell>
+        <Cell><Data ss:Type="String">Attempt to save profile with empty mandatory field</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">System shows a validation error indicating that Email is required and does not save changes</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Clear the 'Email' field
+Click 'Save' button</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-007</Data></Cell>
+        <Cell><Data ss:Type="String">Enter invalid email format while updating profile</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">Validation message 'Please enter a valid email address' is displayed and profile is not saved</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Enter 'invalid-email' in the Email field
+Click 'Save' button</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-008</Data></Cell>
+        <Cell><Data ss:Type="String">Upload unsupported file type as profile picture</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">System displays an error 'Unsupported file type. Please upload JPEG or PNG images' and does not upload the file</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Click 'Change Photo'
+Select a PDF document
+Click 'Upload' button</Data></Cell>
+        <Cell><Data ss:Type="String">document.pdf</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-009</Data></Cell>
+        <Cell><Data ss:Type="String">Upload profile picture exceeding size limit</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">System shows error 'File size exceeds 2 MB limit' and prevents upload</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Click 'Change Photo'
+Select a PNG image of 5 MB
+Click 'Upload' button</Data></Cell>
+        <Cell><Data ss:Type="String">large_image.png (5 MB)</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-010</Data></Cell>
+        <Cell><Data ss:Type="String">Change password with mismatched confirmation</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">Validation error 'New password and confirmation do not match' is displayed and password is not changed</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'Change Password' section
+Enter current valid password
+Enter new password
+Enter a different value in confirm password field
+Click 'Submit' button</Data></Cell>
+        <Cell><Data ss:Type="String">Current: Pass@123, New: NewPass@456, Confirm: NewPass@789</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-011</Data></Cell>
+        <Cell><Data ss:Type="String">Attempt to change password with incorrect current password</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">System displays error 'Current password is incorrect' and does not update the password</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'Change Password' section
+Enter incorrect current password
+Enter valid new password
+Confirm new password
+Click 'Submit' button</Data></Cell>
+        <Cell><Data ss:Type="String">Current: WrongPass, New: NewPass@456</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-012</Data></Cell>
+        <Cell><Data ss:Type="String">Save profile with maximum allowed characters in text fields</Data></Cell>
+        <Cell><Data ss:Type="String">Edge</Data></Cell>
+        <Cell><Data ss:Type="String">Profile saves successfully and all entered data is displayed correctly without truncation</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Enter maximum length strings in First Name, Last Name, Address fields
+Click 'Save' button</Data></Cell>
+        <Cell><Data ss:Type="String">First Name: 50 'A's, Last Name: 50 'B's, Address: 200 'C's</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-013</Data></Cell>
+        <Cell><Data ss:Type="String">Enter special characters in name fields</Data></Cell>
+        <Cell><Data ss:Type="String">Edge</Data></Cell>
+        <Cell><Data ss:Type="String">System either accepts the characters if allowed or shows a validation message specifying allowed characters; profile is saved only if validation passes</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Enter '!@#$%^&*' in First Name and Last Name fields
+Click 'Save' button</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-014</Data></Cell>
+        <Cell><Data ss:Type="String">Leave optional fields blank and save profile</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Profile saves successfully; optional fields remain empty on the profile page</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Clear optional fields such as 'Middle Name' and 'Secondary Phone'
+Click 'Save' button</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-015</Data></Cell>
+        <Cell><Data ss:Type="String">Attempt to view another employee's profile via URL manipulation</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">System returns an authorization error or redirects to own profile, preventing access to other employees' data</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate directly to URL '/employee/profile/12345' where 12345 is not the logged‑in employee's ID
+Press Enter</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-016</Data></Cell>
+        <Cell><Data ss:Type="String">Session timeout while editing profile</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">System prompts for re‑authentication; after successful login, changes are either discarded or can be resubmitted</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Make changes to fields
+Wait until session expires (e.g., 15 minutes of inactivity)
+Click 'Save' button</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-017</Data></Cell>
+        <Cell><Data ss:Type="String">Upload profile picture with corrupted image file</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">System detects file corruption and displays error 'Unable to process image. Please select a valid file.'</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Click 'Change Photo'
+Select a corrupted JPEG file
+Click 'Upload' button</Data></Cell>
+        <Cell><Data ss:Type="String">corrupt.jpg</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-018</Data></Cell>
+        <Cell><Data ss:Type="String">Rapidly submit multiple profile updates</Data></Cell>
+        <Cell><Data ss:Type="String">Edge</Data></Cell>
+        <Cell><Data ss:Type="String">System processes the first request and ignores subsequent duplicate submissions, showing a message 'Changes already saved' or similar</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Make a change to a field
+Click 'Save' button
+Immediately repeat change and click 'Save' again multiple times</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-019</Data></Cell>
+        <Cell><Data ss:Type="String">Verify that audit log records password change</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Audit log shows a record with action 'Password Changed', timestamp, and no password value displayed</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'Change Password' and successfully change password
+Navigate to 'My Profile' → 'View Change History'
+Locate entry for password change</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-020</Data></Cell>
+        <Cell><Data ss:Type="String">Attempt to save profile with HTML/JS script injection</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">System sanitizes input and either strips the script tags or shows a validation error, preventing XSS vulnerability</Data></Cell>
+        <Cell><Data ss:Type="String">Navigate to Employee Self Service
+Open 'My Profile'
+Enter '<script>alert(1)</script>' in the Address field
+Click 'Save' button</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+</Workbook>
